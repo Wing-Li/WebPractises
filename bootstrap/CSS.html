@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+
+    <style>
+
+        .grid-body [class*="col-md"] {
+            background-color: #cccccc;
+            border: 1px solid black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .grid-body [class*="col-xs"] {
+            background-color: #cccccc;
+            border: 1px solid black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .grid-body [class*="col-sm"] {
+            background-color: #cccccc;
+            border: 1px solid black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .row {
+            margin-top: 10px;
+        }
+
+        .form-border {
+            border: 1px solid #ddd;
+            padding: 32px;
+        }
+
+        .img-body {
+            padding: 32px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="grid-body">
+        <h3>栅格系统
+            <small>注意要放在 .row 的div中</small>
+        </h3>
+        <br>
+
+        <strong>
+            col-md-8 PC的；<br>
+            col-sm-4 平板的；<br>
+            col-xs-12 手机的。<br>
+        </strong>
+
+        <div class="row">
+            <div class="col-md-1">1列</div>
+            <div class="col-md-1">2一列</div>
+            <div class="col-md-1">3一列</div>
+            <div class="col-md-1">4一列</div>
+            <div class="col-md-1">5一列</div>
+            <div class="col-md-1">6一列</div>
+            <div class="col-md-1">7一列</div>
+            <div class="col-md-1">8一列</div>
+            <div class="col-md-1">9一列</div>
+            <div class="col-md-1">10一列</div>
+            <div class="col-md-1">11一列</div>
+            <div class="col-md-1">12一列</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">原来是没东西</div>
+            <div class="clearfix visible-xs-block"></div>
+
+            <div class="col-md-4">我就说这么不显示我就说这么不显示我就说这么不显示我就说这么不显示我就说这么不显示我就说这么不显示我就说这么不显示我就说这么不显示我就说这么不显示我就说这么不显示</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4">.col-md-4</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">.col-md-6</div>
+            <div class="col-md-6">.col-md-6</div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+            <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+            <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+            <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-9">132</div>
+            <div class="col-md-6 col-md-offset-3">321</div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-11">
+                第一季的内容
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4">这个先占4个算了</div>
+                    <div class="col-xs-6 col-sm-6">这个先占6个</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+
+    <h3>排版
+        <small>为了程序的标准，以及代码的友好性，即使是效果相同的标签语义不同时，也应该是用不同的标签</small>
+    </h3>
+
+    <p class="text-center">通过添加
+        <abbr title="通过添加 .lead 类可以让段落突出显示。">
+            <mark>.lead</mark>
+        </abbr>
+        类可以让段落突出显示。
+    </p>
+    <p class="lead">
+        Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+    </p>
+
+    <p class="text-right">对于不需要强调的inline或block类型的文本，使用
+        <mark>small</mark>
+        标签包裹，其内的文本将被设置为<strong>父容器字体大小的 85%。</strong></p>
+
+    <p><em>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</em>
+        <del> Donec ullamcorper nulla non metus auctor
+            fringilla. Duis mollis 被删除的文本
+        </del>
+        ,est non commodo luctus, nisi erat porttitor ligula, <s> eget lacinia odio sem nec elit. Donec
+            ullamcorper nulla non metus auctor fringilla 无用文本</s>.
+    </p>
+
+    <p>
+        <ins>Maecenas sed diam eget risus varius blandit sit amet non magna 插入的文本</ins>
+        . Donec id elit non mi porta gravida at eget metus.
+        Duis mollis, <u>est non commodo luctus, nisi erat porttitor ligula 带下划线的文本</u>, eget lacinia odio sem nec elit.
+    </p>
+
+    <blockquote>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+        <footer><cite title="Someone famous">Someone famous</cite> in <abbr title="Source Title">Source Title</abbr></footer>
+    </blockquote>
+
+    <dl class="dl-horizontal text-overflow">
+        <dt>Description lists</dt>
+        <dd>A description list is perfect for defining terms.</dd>
+
+        <dt>Euismod</dt>
+        <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<br>
+            Donec id elit non mi porta gravida at eget metus.
+        </dd>
+
+        <dt>Malesuada porta</dt>
+        <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+    </dl>
+
+    <br>
+    <br>
+    <hr>
+    <h3>代码
+        <small>这个用的挺频繁的</small>
+    </h3>
+    For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+    <br>
+    <br>
+
+    <b>代码块</b>
+    <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+    <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+    <br>
+    通过
+    <mark>samp</mark>
+    标签来标记程序输出的内容。
+    <samp>This text is meant to be treated as sample output from a computer program.</samp>
+
+    <br>
+    <br>
+    <hr>
+    <h3>表格</h3>
+
+    <table class="table table-striped table-bordered table-hover">
+        <tr>
+            <th></th>
+            <th>Class Name</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>table-striped</td>
+            <td>一列一换色</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>table-bordered</td>
+            <td>为表格和其中的每个单元格增加边框</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>table-hover</td>
+            <td>鼠标悬停变色</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>table-condensed</td>
+            <td>让表格更加紧凑</td>
+        </tr>
+        <tr class="success">
+            <td>5</td>
+            <td>active success info warning danger</td>
+            <td>状态类</td>
+        </tr>
+        <tr class="info">
+            <td>6</td>
+            <td>info</td>
+            <td>状态类</td>
+        </tr>
+        <tr class="danger">
+            <td>7</td>
+            <td>danger</td>
+            <td>状态类</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <hr>
+    <h3>表单</h3>
+
+    <form class="form-border ">
+
+        <h4><b>一定要添加 label 标签,不想显示可以通过.sr-only 类将其隐藏</b></h4><br>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="exampleInputFile">
+
+            <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Check me out
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+
+    <form class="form-border form-inline">
+        form-inline 类可使其内容左对齐并且表现为 inline-block 级别的控件<br>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="exampleInputFile">
+
+            <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Check me out
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+
+    <form class="form-border form-horizontal">
+
+
+        <p><strong>通过为表单添加 .form-horizontal 类，并联合使用 Bootstrap 预置的栅格类，可以将 label 标签和控件组水平并排布局。这样做将改变 .form-group
+            的行为，使其表现为栅格系统中的行（row），因此就无需再额外添加
+            .row 了。</strong>
+        </p>
+        <mark>禁用</mark>
+        <fieldset disabled>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email address</label>
+
+                <div class="col-md-10">
+                    <p class="form-control-static">email@example.com</p>
+                </div>
+            </div>
+            <div class="form-group has-error">
+                <label class="col-md-2 control-label">Password</label>
+
+                <div class="col-md-10">
+                    <input class="form-control" type="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-offset-2">
+                    <input type="checkbox"> Can't check this
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary col-md-offset-2">Submit</button>
+        </fieldset>
+        <mark>只读</mark>
+        <input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+
+        <br/>
+
+        <div class="form-group has-success has-feedback">
+            <label class="col-md-2 control-label" for="inputSuccess2">Input with success</label>
+
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                <span id="inputSuccess2Status" class="sr-only">(success)</span>
+            </div>
+        </div>
+
+        <br/>
+
+        <div class="form-group has-success has-feedback">
+            <label class="control-label col-sm-2" for="inputGroupSuccess2">Input group with success</label>
+
+            <div class="col-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input type="text" class="form-control" id="inputGroupSuccess2" aria-describedby="inputGroupSuccess2Status">
+                </div>
+                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+            </div>
+        </div>
+    </form>
+
+    <br>
+    <br>
+    <hr>
+    <h3>图片</h3>
+
+    <div class="img-body bg-success">
+        <img class="img-responsive center-block" src="q1024.jpg" alt="萌萌的怜悯">
+
+        <img src="q1024.jpg" alt="圆角" class="img-rounded">
+        <img src="q1024.jpg" alt="圆形" class="img-circle">
+        <img src="q1024.jpg" alt="矩形" class="img-thumbnail">
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <h3>辅助类</h3>
+
+    <h4>情境文本颜色</h4>
+
+    <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+    <p class="text-primary">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+    <p class="text-success">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+    <p class="text-info">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+    <p class="text-warning">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+    <p class="text-danger">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+    <h4>情境背景色</h4>
+
+    <p class="bg-primary">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+    <p class="bg-success">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+    <p class="bg-info">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+    <p class="bg-warning">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+    <p class="bg-danger">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+    <span class="caret"></span>
+
+    <h4>快速浮动</h4>
+
+    <p>
+        左边：pull-left；<br/>
+        右边：pull-right；
+        居中：center-block
+        清除浮动：clearfix
+    </p>
+    <h4>显示或隐藏内容</h4>
+
+    <p>
+        显示：show；隐藏：hidden
+    </p>
+</div>
+</body>
+</html>

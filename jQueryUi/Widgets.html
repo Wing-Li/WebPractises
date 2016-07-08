@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Widgets</title>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <link href="jquery-ui.min.css" rel="stylesheet">
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <style>
+        #accordion1 {
+            width: 50%;
+        }
+
+        #accordion2 {
+            width: 50%;
+        }
+
+        #resizable {
+            width: 60%;
+            height: 300px;
+            margin: 0 auto;
+            min-width: 800px;
+        }
+
+        .ui-menu {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h3>标签</h3>
+
+    <div id="resizable" class="ui-widget-content">
+        <div id="accordion1" class="pull-left">
+            <h3>第一个标签</h3>
+
+            <div>
+                <p>
+                    第一段的文字第一段的文字第一段的文字第一段的文字第一段的文字第一段的文字第一段的文字第一段的文字第一段的文字第一段的文字
+                </p>
+            </div>
+            <h3>第二个标签</h3>
+
+            <div>
+                <p>
+                    第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签
+                </p>
+            </div>
+            <h3>第仨个标签</h3>
+
+            <div>
+                <p>
+                    第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签
+                </p>
+            </div>
+
+        </div>
+
+        <div id="accordion2" class="pull-right">
+            <div class="group">
+                <h3>我们</h3>
+
+                <div>
+                    <p>
+                        第一段的文字第一段的文字第一段的文字第一段的文字第一段的文字第一段的文字第一段的文字第一段的文字第一段的文字第一段的文字
+                    </p>
+                </div>
+            </div>
+            <div class="group">
+                <h3>可以</h3>
+
+                <div>
+                    <p>
+                        第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签第二个标签
+                    </p>
+                </div>
+            </div>
+            <div class="group">
+                <h3>上下拖动</h3>
+
+                <div>
+                    <p>
+                        第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签第仨个标签
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>自动提示</h3>
+
+    <div class="ui-widget">
+        <label for="tags">Tags: </label>
+        <input id="tags" type="text">
+    </div>
+
+    <br>
+
+    <button>button按钮</button>
+
+    <input type="submit" value="弹出dialog" id="dialog-btn">
+
+    <a href="#">a标签按钮</a>
+
+    <br>
+    <br>
+
+    <p>日期选择：<input type="text" id="datepicker"></p>
+
+    <div id="dialog" title="Basic dialog">
+        <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with
+            the 'x' icon.</p>
+    </div>
+
+    <button id="opener">Open Dialog</button>
+
+    <br>
+    <br>
+
+    <ul id="menu">
+        <li>山西
+            <ul>
+                <li>运城</li>
+                <li>临汾</li>
+                <li>太原</li>
+                <li>长治</li>
+                <li>大同</li>
+                <li>晋城</li>
+            </ul>
+        </li>
+
+        <li>陕西
+            <ul>
+                <li>西安</li>
+                <li>渭南</li>
+                <li>安康</li>
+            </ul>
+        </li>
+
+        <li class="ui-state-disabled">北京</li>
+        <li>河南</li>
+    </ul>
+
+    <br>
+    <br>
+
+    <div id="progressbar">
+        <div class="progress-label">Loading...</div>
+    </div>
+
+    <br>
+    <br>
+
+    <select id="select" style="width: 140px">
+        <optgroup label="选择">
+            <option>单选</option>
+            <option>多选</option>
+        </optgroup>
+        <optgroup label="输入">
+            <option selected="selected">单行输入</option>
+            <option>多行输入</option>
+        </optgroup>
+        <option>日期选择</option>
+    </select>
+
+    <br>
+    <br>
+
+    <div id="progres2"></div>
+    <br>
+    <div id="slider"></div>
+
+
+</div>
+
+
+<script>
+    $(function () {
+        $("#resizable").resizable();
+        $("#accordion1").accordion();
+
+
+        $("#accordion2")
+                .accordion({
+                    header: "> div > h3"
+                })
+                .sortable({
+                    stop: function (event, ui) {
+                        ui.item.children("h3").triggerHandler("focusout");
+
+                        // Refresh accordion to handle new order
+                        $(this).accordion("refresh");
+                    }
+                });
+        var availableTags = [
+            "ActionScript", "AppleScript", "Asp", "BASIC", "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran", "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python", "Ruby", "Scala", "Scheme"];
+        $("#tags").autocomplete({
+            source: availableTags,
+            delay: 500
+        });
+
+        $(function () {
+            $("input[type=submit], a, button")
+                    .button()
+                    .click(function (event) {
+                        event.preventDefault();
+                    });
+        });
+
+        $("#datepicker").datepicker();
+
+        $("#dialog").dialog({
+            autoOpen: false
+        });
+
+        $("#opener").click(function () {
+            $("#dialog").dialog("open");
+        });
+
+        $("#menu").menu();
+
+        $("#progressbar").progressbar({
+            value: false,
+            change: function () {
+                $(".progress-label").text($("#progressbar").progressbar("value") + "%");
+            },
+            complete: function () {
+                $(".progress-label").text("Complete!");
+            }
+        });
+        function progress() {
+            var val = $("#progressbar").progressbar("value") || 0;
+            $("#progressbar").progressbar("value", val + 2);
+            if (val < 99) {
+                setTimeout(progress, 80);
+            }
+        }
+
+        setTimeout(progress, 2000);
+
+        $("#select").selectmenu();
+
+        $("#progres2").progressbar({
+            max:100
+        });
+        $("#slider").slider({
+            range: false,
+            min: 0,
+            max: 100,
+            values: 60,
+            slide: function( event, ui ) {
+                $("#progres2").progressbar("value",ui.value);
+            }
+        });
+    });
+
+</script>
+</body>
+</html>
