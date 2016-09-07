@@ -1,0 +1,85 @@
+div {
+    padding: 0;
+    margin: 30px auto;
+    background-color: #FF5C00;
+    width: 100px;
+    height: 100px;
+}
+
+/*.div2{*/
+/*transform: translate(100px,100px);*/
+/*-webkit-transform: translate(100px,100px);*/
+/*}*/
+
+.div2 {
+    transform: rotate(30deg);
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Safari and Chrome */
+}
+
+.div3 {
+    transform: scale(0.5, 0.5);
+}
+
+.div4 {
+    transform: skew(30deg, 20deg);
+}
+
+.div5 {
+    -webkit-transition: width 2s, height 2s, transform 2s;
+    -moz-transition: width 2s, height 2s, transform 2s;
+    -o-transition: width 2s, height 2s, transform 2s;
+    transition: width 2s, height 2s, transform 2s;
+    transition-delay: 1s;
+}
+
+.div5:hover {
+    width: 200px;
+    height: 200px;
+    transform: rotate(360deg);
+}
+
+.div6 {
+    position: relative;
+    animation-direction: normal;
+    -webkit-animation-direction: alternate;
+    animation: anim 4s infinite;
+    -webkit-animation: anim 4s infinite;
+}
+
+@keyframes anim {
+    0% {
+        background: red;
+        left: 0;
+        top: 0
+    }
+    25% {
+        background: blue;
+        left: 200px;
+        top: 0px
+    }
+    50% {
+        background: yellow;
+        left: -200px;
+        top: 0px;
+    }
+    75% {
+        background: red;
+        left: 0px;
+        top: 0px
+    }
+}
+
+.div7 {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+    column-count: 4;
+    column-gap: 50px;
+    column-rule: 5px outset #FF0000;
+
+    -webkit-column-count: 4;
+    -webkit-column-gap: 50px;
+    -webkit-column-rule: 5px outset #FF0000;
+}
