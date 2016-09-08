@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <link rel="stylesheet" type="text/css" href="selector.css"/>
+</head>
+<body>
+
+<h3>属性选择器</h3>
+
+<div id="div1">[id*=div] 全字符通配</div>
+<div id="mydiv4">[id^=my] 首字符通配</div>
+<div id="divmy">[id$=my] 尾字符通配</div>
+<div id="ddd5">[id$=\5] 数字加上反斜杠</div>
+<div id="div3">如果你已经设定了，然后再设定，并不会被覆盖</div>
+
+<br/>
+
+<h3>伪元素选择器</h3>
+
+<h5>first-line 对首行指定某类的效果</h5>
+
+<p>这是第一行的内容<br/> 这是第二行的内容</p>
+
+<h5>first-letter 对首字母</h5>
+
+<p>This is my blog.</p>
+
+<h5>before 在元素最前面插入内容</h5>
+<ul>
+    <li>列表1</li>
+    <li>列表1</li>
+    <li>列表1</li>
+    <li>列表1</li>
+</ul>
+
+<h5>after 在元素最后插入内容</h5>
+
+<br/>
+
+<h3>结构性伪类选择器</h3>
+
+<p> root : 根属性。当设置 root 背景时，在设置 body 的背景，body 只对内容部分生效</p>
+<p> not : 不继承父属性</p>
+<p> empty : 没有内容的部分，的属性</p>
+<p> target : 在设置 target 的地方，点击了之后跳转到的页面的 target 指向所显示的属性</p>
+
+
+</body>
+</html>

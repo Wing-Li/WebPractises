@@ -1,0 +1,46 @@
+/*属性选择器*/
+
+[id*=div] {
+    color: #c0a16b;
+}
+
+[id^=my] {
+    color: red;
+}
+
+[id$=my] {
+    color: blue;
+}
+
+[id*=d5] {
+    color: yellowgreen;
+}
+
+/*伪元素选择器*/
+
+p:first-line {
+    color: chocolate;
+}
+
+p:first-letter {
+    color: red;
+    font-size: 30px;
+}
+
+li:before {
+    content: "这是用before添加的，";
+    font-size: 10px;
+    color: gray;
+}
+
+li:after {
+    content: " 这是用after添加的，";
+    font-size: 10px;
+    color: gray;
+}
+
+/*结构性伪类选择器*/
+:root{
+    background-color: snow;
+}
+
