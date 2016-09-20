@@ -1,0 +1,227 @@
+.div {
+    background-color: aqua;
+    display: inline-block;
+    width: 300px;
+}
+
+.span {
+    background-color: #7c5900;
+    display: inline-block;
+    width: 300px;
+}
+
+.span1 {
+    background-color: #7c5900;
+    display: inline;
+    width: 300px;
+}
+
+table {
+    border: solid 3px #28a24a;
+    display: inline-table;
+}
+
+td {
+    border: solid 1px #449d44;
+}
+
+.list {
+    display: list-item;
+    list-style-type: circle;
+    margin-left: 30px;
+}
+
+/* boxcontent */
+
+.content {
+    width: 300px;
+    height: 150px;
+    border: solid 2px #f7e1b5;
+    overflow: scroll;
+}
+
+.content2 {
+    width: 300px;
+    height: 150px;
+    margin-top: 30px;
+    border: solid 2px #f7e1b5;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+/* box-shadow */
+.shown {
+    background-color: #ffaa00;
+    box-shadow: 10px 10px 15px gray;
+    width: 200px;
+    height: 100px;;
+}
+
+/*盒子边距*/
+
+#div1 {
+    background-color: #1b1b1b;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+
+#div2 {
+    background-color: #5bc0de;
+    box-sizing: content-box;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+
+/*背景相关*/
+
+.bg div {
+    background-color: black;
+    border: dashed 15px green;
+    padding: 30px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+
+    /*background: url("../img/mylist.png");*/
+    /*background-repeat: no-repeat;*/
+}
+
+.bg .div1 {
+    background-clip: border-box;
+    background-origin: border-box;
+}
+
+.bg .div2 {
+    background-clip: content-box;
+    background-origin: content-box;
+    margin-top: 30px;
+}
+
+.bg .div3 {
+    background-clip: padding-box;
+    background-origin: padding-box;
+    margin-top: 30px;
+}
+
+.bg2 {
+    background-image: url("../img/a8.jpg"), url("../img/a11.jpg");
+    background-repeat: repeat-x, no-repeat;
+    background-position: 100%, 100%, center, center;
+    width: 600px;
+    height: 400px;;
+}
+
+/*边框处理*/
+
+.cirle {
+    background-color: gray;
+    border: solid 2px #000;
+    width: 300px;
+    height: 200px;;
+    padding: 20px;;
+    border-radius: 30px;
+}
+
+.bg4 {
+    /* 上 */
+    -webkit-border-image: url("../img/a9.jpg") 50 50 50 60;
+    width: 200px;
+}
+
+.transform {
+    width: 200px;
+    height: 100px;
+    background-color: #35b559;
+    margin: 150px auto;
+    text-align: center;
+
+    /*transform: rotate(45deg);旋转*/
+    /*transform: scale(2.5); 缩放*/
+    /*transform: translate(250px,250px);移动*/
+    /*倾斜*/
+    /*transform: skew(30deg,10deg) rotate(30deg) scale(1.5) translate(100px,150px) ;*/
+    transform: translate(100px, 150px) skew(30deg, 10deg) rotate(30deg) scale(1.5);
+
+    /* 顺序不同，最后的位置可能会不同 */
+}
+
+.anim .pingyi {
+    background-color: #ffff00;
+    color: #000000;
+    width: 200px;
+
+    /*transition: background-color 2s linear;*/
+
+    /*transition-property:background-color;*/
+    /*transition-duration: 2s;*/
+    /*transition-timing-function: linear;*/
+
+    transition: background-color 2s linear, color 2s linear, width 2s linear;
+
+}
+
+.anim .pingyi:hover {
+    background-color: #FF5C00;
+    color: white;
+    width: 500px;
+}
+
+.anim .fuza {
+    background-color: red;
+    width: 200px;
+}
+
+/*定义一个渐变的效果*/
+@-webkit-keyframes mycolor {
+    0% {
+        background-color: red;
+    }
+    40% {
+        background-color: #ff00ff;
+    }
+    70% {
+        background-color: aqua;
+    }
+    100% {
+        background-color: red;
+    }
+}
+
+/*使用 我们自定义的效果*/
+.anim .fuza:hover {
+    -webkit-animation: mycolor 3s linear;
+
+}
+
+.anim .fuza2{
+    position: absolute;
+    background-color: #ffff00;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 300px;
+}
+@-webkit-keyframes mycolor2 {
+    0% {
+        background-color: red;
+        transform: rotate(0deg);
+    }
+    40% {
+        background-color: #ff00ff;
+        transform:rotate(30deg);
+    }
+    70% {
+        background-color: aqua;
+        transform:rotate(-30deg);
+    }
+    100% {
+        background-color: red;
+        transfrom:rotate(0deg);
+    }
+}
+.anim .fuza2:hover{
+    -webkit-animation:mycolor2 4s linear;
+}
