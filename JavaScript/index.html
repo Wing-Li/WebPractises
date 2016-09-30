@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body onload="time()">
+		<p id="pid">hello</p>
+		<a id="aid" href="#">点我</a>
+		<button id="btn">按钮</button>
+
+		<br /><br />
+		<div id="time"></div>
+
+		<script>
+			var btn = document.getElementById("btn");
+			btn.addEventListener("click", demo)
+
+			function demo() {
+				var name = document.getElementById("pid");
+				name.innerHTML = "我是段落";
+				name.style.background = "red"; //修改CSS
+				name.style.height = "100px"; //修改CSS
+				document.getElementById("aid").href = "https://www.baidu.com"; //修改属性
+			}
+		</script>
+
+		<script>
+			// 计时器
+			function time() {
+				var date = new Date();
+				var h = date.getHours();
+				var m = date.getMinutes();
+				var s = date.getSeconds();
+
+				m = checkTime(m);
+				s = checkTime(s);
+
+				document.getElementById("time").innerHTML = "时间：" + h + ":" + m + ":" + s;
+
+				setTimeout(function() {
+					time();
+				}, 1000);
+			}
+
+			function checkTime(i) {
+				if(i < 10) {
+					i = "0" + i;
+				}
+				return i;
+			}
+		</script>
+
+	</body>
+
+</html>
